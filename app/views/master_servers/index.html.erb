@@ -1,0 +1,39 @@
+<h1>Listing master_servers</h1>
+
+<table>
+  <tr>
+    <th>Servername</th>
+    <th>Serversize</th>
+    <th>Server region</th>
+    <th>Ind resource</th>
+    <th>Ind hour</th>
+    <th>Org res</th>
+    <th>Org hour</th>
+    <th>Group res</th>
+    <th>Group hour</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @master_servers.each do |master_server| %>
+  <tr>
+    <td><%= master_server.servername %></td>
+    <td><%= master_server.serversize %></td>
+    <td><%= master_server.server_region %></td>
+    <td><%= master_server.ind_resource %></td>
+    <td><%= master_server.ind_hour %></td>
+    <td><%= master_server.org_res %></td>
+    <td><%= master_server.org_hour %></td>
+    <td><%= master_server.group_res %></td>
+    <td><%= master_server.group_hour %></td>
+    <td><%= link_to 'Show', master_server %></td>
+    <td><%= link_to 'Edit', edit_master_server_path(master_server) %></td>
+    <td><%= link_to 'Destroy', master_server, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Master server', new_master_server_path %>

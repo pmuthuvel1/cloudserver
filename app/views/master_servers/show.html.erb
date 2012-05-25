@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Servername:</b>
+  <%= @master_server.servername %>
+</p>
+
+<p>
+  <b>Serversize:</b>
+  <%= @master_server.serversize %>
+</p>
+
+<p>
+  <b>Server region:</b>
+  <%= @master_server.server_region %>
+</p>
+
+<p>
+  <b>Ind resource:</b>
+  <%= @master_server.ind_resource %>
+</p>
+
+<p>
+  <b>Ind hour:</b>
+  <%= @master_server.ind_hour %>
+</p>
+
+<p>
+  <b>Org res:</b>
+  <%= @master_server.org_res %>
+</p>
+
+<p>
+  <b>Org hour:</b>
+  <%= @master_server.org_hour %>
+</p>
+
+<p>
+  <b>Group res:</b>
+  <%= @master_server.group_res %>
+</p>
+
+<p>
+  <b>Group hour:</b>
+  <%= @master_server.group_hour %>
+</p>
+
+
+<%= link_to 'Edit', edit_master_server_path(@master_server) %> |
+<%= link_to 'Back', master_servers_path %>

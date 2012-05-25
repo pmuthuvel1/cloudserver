@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @login.username %>
+</p>
+
+<p>
+  <b>Pass word:</b>
+  <%= @login.pass_word %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @login.name %>
+</p>
+
+<p>
+  <b>Usertype:</b>
+  <%= @login.usertype %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @login.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @login.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_login_path(@login) %> |
+<%= link_to 'Back', logins_path %>

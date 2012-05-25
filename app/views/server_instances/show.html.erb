@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ownerid:</b>
+  <%= @server_instance.ownerid %>
+</p>
+
+<p>
+  <b>Masterid:</b>
+  <%= @server_instance.masterid %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @server_instance.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @server_instance.end_time %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @server_instance.status %>
+</p>
+
+<p>
+  <b>Recentbill:</b>
+  <%= @server_instance.recentbill %>
+</p>
+
+<p>
+  <b>Recent exe date:</b>
+  <%= @server_instance.recent_exe_date %>
+</p>
+
+<p>
+  <b>Totalbill:</b>
+  <%= @server_instance.totalbill %>
+</p>
+
+
+<%= link_to 'Edit', edit_server_instance_path(@server_instance) %> |
+<%= link_to 'Back', server_instances_path %>

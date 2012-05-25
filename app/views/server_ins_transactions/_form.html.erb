@@ -1,0 +1,49 @@
+<%= form_for(@server_ins_transaction) do |f| %>
+  <% if @server_ins_transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@server_ins_transaction.errors.count, "error") %> prohibited this server_ins_transaction from being saved:</h2>
+
+      <ul>
+      <% @server_ins_transaction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ser_inst_id %><br />
+    <%= f.number_field :ser_inst_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ownerid %><br />
+    <%= f.number_field :ownerid %>
+  </div>
+  <div class="field">
+    <%= f.label :masterid %><br />
+    <%= f.number_field :masterid %>
+  </div>
+  <div class="field">
+    <%= f.label :exec_date %><br />
+    <%= f.date_select :exec_date %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :hours_run %><br />
+    <%= f.number_field :hours_run %>
+  </div>
+  <div class="field">
+    <%= f.label :totalbill %><br />
+    <%= f.text_field :totalbill %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

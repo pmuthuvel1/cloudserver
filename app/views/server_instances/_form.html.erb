@@ -1,0 +1,49 @@
+<%= form_for(@server_instance) do |f| %>
+  <% if @server_instance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@server_instance.errors.count, "error") %> prohibited this server_instance from being saved:</h2>
+
+      <ul>
+      <% @server_instance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ownerid %><br />
+    <%= f.number_field :ownerid %>
+  </div>
+  <div class="field">
+    <%= f.label :masterid %><br />
+    <%= f.number_field :masterid %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :recentbill %><br />
+    <%= f.text_field :recentbill %>
+  </div>
+  <div class="field">
+    <%= f.label :recent_exe_date %><br />
+    <%= f.date_select :recent_exe_date %>
+  </div>
+  <div class="field">
+    <%= f.label :totalbill %><br />
+    <%= f.text_field :totalbill %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<h1>Listing server_instances</h1>
+
+<table>
+  <tr>
+    <th>Ownerid</th>
+    <th>Masterid</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Status</th>
+    <th>Recentbill</th>
+    <th>Recent exe date</th>
+    <th>Totalbill</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @server_instances.each do |server_instance| %>
+  <tr>
+    <td><%= server_instance.ownerid %></td>
+    <td><%= server_instance.masterid %></td>
+    <td><%= server_instance.start_time %></td>
+    <td><%= server_instance.end_time %></td>
+    <td><%= server_instance.status %></td>
+    <td><%= server_instance.recentbill %></td>
+    <td><%= server_instance.recent_exe_date %></td>
+    <td><%= server_instance.totalbill %></td>
+    <td><%= link_to 'Show', server_instance %></td>
+    <td><%= link_to 'Edit', edit_server_instance_path(server_instance) %></td>
+    <td><%= link_to 'Destroy', server_instance, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Server instance', new_server_instance_path %>

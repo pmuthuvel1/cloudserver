@@ -1,0 +1,53 @@
+<%= form_for(@master_server) do |f| %>
+  <% if @master_server.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@master_server.errors.count, "error") %> prohibited this master_server from being saved:</h2>
+
+      <ul>
+      <% @master_server.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :servername %><br />
+    <%= f.text_field :servername %>
+  </div>
+  <div class="field">
+    <%= f.label :serversize %><br />
+    <%= f.text_field :serversize %>
+  </div>
+  <div class="field">
+    <%= f.label :server_region %><br />
+    <%= f.text_field :server_region %>
+  </div>
+  <div class="field">
+    <%= f.label :ind_resource %><br />
+    <%= f.text_field :ind_resource %>
+  </div>
+  <div class="field">
+    <%= f.label :ind_hour %><br />
+    <%= f.text_field :ind_hour %>
+  </div>
+  <div class="field">
+    <%= f.label :org_res %><br />
+    <%= f.text_field :org_res %>
+  </div>
+  <div class="field">
+    <%= f.label :org_hour %><br />
+    <%= f.text_field :org_hour %>
+  </div>
+  <div class="field">
+    <%= f.label :group_res %><br />
+    <%= f.text_field :group_res %>
+  </div>
+  <div class="field">
+    <%= f.label :group_hour %><br />
+    <%= f.number_field :group_hour %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

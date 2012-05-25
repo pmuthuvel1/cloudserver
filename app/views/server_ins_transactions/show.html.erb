@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ser inst:</b>
+  <%= @server_ins_transaction.ser_inst_id %>
+</p>
+
+<p>
+  <b>Ownerid:</b>
+  <%= @server_ins_transaction.ownerid %>
+</p>
+
+<p>
+  <b>Masterid:</b>
+  <%= @server_ins_transaction.masterid %>
+</p>
+
+<p>
+  <b>Exec date:</b>
+  <%= @server_ins_transaction.exec_date %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @server_ins_transaction.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @server_ins_transaction.end_time %>
+</p>
+
+<p>
+  <b>Hours run:</b>
+  <%= @server_ins_transaction.hours_run %>
+</p>
+
+<p>
+  <b>Totalbill:</b>
+  <%= @server_ins_transaction.totalbill %>
+</p>
+
+
+<%= link_to 'Edit', edit_server_ins_transaction_path(@server_ins_transaction) %> |
+<%= link_to 'Back', server_ins_transactions_path %>

@@ -1,0 +1,37 @@
+<h1>Listing server_ins_transactions</h1>
+
+<table>
+  <tr>
+    <th>Ser inst</th>
+    <th>Ownerid</th>
+    <th>Masterid</th>
+    <th>Exec date</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Hours run</th>
+    <th>Totalbill</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @server_ins_transactions.each do |server_ins_transaction| %>
+  <tr>
+    <td><%= server_ins_transaction.ser_inst_id %></td>
+    <td><%= server_ins_transaction.ownerid %></td>
+    <td><%= server_ins_transaction.masterid %></td>
+    <td><%= server_ins_transaction.exec_date %></td>
+    <td><%= server_ins_transaction.start_time %></td>
+    <td><%= server_ins_transaction.end_time %></td>
+    <td><%= server_ins_transaction.hours_run %></td>
+    <td><%= server_ins_transaction.totalbill %></td>
+    <td><%= link_to 'Show', server_ins_transaction %></td>
+    <td><%= link_to 'Edit', edit_server_ins_transaction_path(server_ins_transaction) %></td>
+    <td><%= link_to 'Destroy', server_ins_transaction, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Server ins transaction', new_server_ins_transaction_path %>

@@ -17,11 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :serversize %><br />
-    <%= f.text_field :serversize %>
+    <%#= f.text_field :serversize --%>
+    <%= f.select :serversize, [['m1.small','m1.small'],['m2.medium','m2.medium'],['m3.large','m3.large']] %>
+
   </div>
   <div class="field">
     <%= f.label :server_region %><br />
-    <%= f.text_field :server_region %>
+    <%#= f.text_field :server_region %>
+    <%= f.select :server_region, [['USA','USA'],['EROUPE','EROUPE'],['ASIA','ASIA'],['AFRICA','AFRICA']] %>
+
   </div>
   <div class="field">
     <%= f.label :ind_resource %><br />

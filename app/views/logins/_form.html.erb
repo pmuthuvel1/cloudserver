@@ -25,7 +25,9 @@
   </div>
   <div class="field">
     <%= f.label :usertype %><br />
-    <%= f.text_field :usertype %>
+    <%#= f.text_field :usertype %>
+    <%= f.select :usertype, [['Individual','Individual'],['Organization','Organization'],['Group','Group']] %>
+
   </div>
   <div class="field">
     <%= f.label :email %><br />

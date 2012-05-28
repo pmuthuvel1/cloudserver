@@ -13,3 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$('a[user-popup]').live('click', function(e) { window.open($(this).attr('href')); e.preventDefault(); });
+$('a[server-popup]').live('click', function(e) { window.open($(this).attr('href')); e.preventDefault(); });

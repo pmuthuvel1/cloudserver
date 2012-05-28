@@ -13,35 +13,39 @@
 
   <div class="field">
     <%= f.label :ownerid %><br />
-    <%= f.number_field :ownerid %>
+    <%= f.number_field :ownerid , :disabled=>true %>
+    <%= link_to( 'Select Owner USer For this instance', '/logins/findalluser' , 'user-popup' => true ) %>
+
   </div>
   <div class="field">
     <%= f.label :masterid %><br />
-    <%= f.number_field :masterid %>
+    <%= f.number_field :masterid , :disabled=>true %>
+    <%= link_to( 'Select a Server Type For this instance', '/master_servers/findallservers', 'server-popup' => true ) %>
   </div>
   <div class="field">
-    <%= f.label :start_time %><br />
-    <%= f.datetime_select :start_time %>
+    <%#= f.label :start_time %><br />
+    <%#= f.datetime_select :start_time %>
   </div>
   <div class="field">
-    <%= f.label :end_time %><br />
-    <%= f.datetime_select :end_time %>
+    <%#= f.label :end_time %><br />
+    <%#= f.datetime_select :end_time %>
   </div>
   <div class="field">
     <%= f.label :status %><br />
-    <%= f.text_field :status %>
+    <%= f.select :status, [['idle','idle'],['running','running'],['stopped','stopped']] %>
+
   </div>
   <div class="field">
-    <%= f.label :recentbill %><br />
-    <%= f.text_field :recentbill %>
+    <%#= f.label :recentbill %><br />
+    <%#= f.text_field :recentbill %>
   </div>
   <div class="field">
-    <%= f.label :recent_exe_date %><br />
-    <%= f.date_select :recent_exe_date %>
+    <%#= f.label :recent_exe_date %><br />
+    <%#= f.date_select :recent_exe_date %>
   </div>
   <div class="field">
-    <%= f.label :totalbill %><br />
-    <%= f.text_field :totalbill %>
+    <%#= f.label :totalbill %><br />
+    <%#= f.text_field :totalbill %>
   </div>
   <div class="actions">
     <%= f.submit %>

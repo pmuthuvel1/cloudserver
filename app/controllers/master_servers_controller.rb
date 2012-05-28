@@ -80,4 +80,13 @@ class MasterServersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def findallservers
+    @master_servers = MasterServer.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: findallservers }
+    end
+  end
 end

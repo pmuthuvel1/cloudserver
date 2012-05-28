@@ -80,4 +80,16 @@ class LoginsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  
+  def findallusers
+    @logins = Login.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @logins }
+    end
+  end
+
+  
 end
